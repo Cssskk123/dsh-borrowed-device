@@ -175,13 +175,24 @@ window.__ModuleLoader__.load({
 
         React.useEffect(() => {
           let alive = true
-          void refresh()
-          const timer = setInterval(() => {
+          const tick = () => {
             if (alive && !busy) void refresh()
-          }, 8000)
+          }
+          void refresh()
+          // A slow safety poll only: actions refresh on their own, and coming
+          // back to the window refreshes immediately.
+          const timer = setInterval(tick, 20000)
+          const onFocus = () => tick()
+          const onVisible = () => {
+            if (document.visibilityState === 'visible') tick()
+          }
+          window.addEventListener('focus', onFocus)
+          document.addEventListener('visibilitychange', onVisible)
           return () => {
             alive = false
             clearInterval(timer)
+            window.removeEventListener('focus', onFocus)
+            document.removeEventListener('visibilitychange', onVisible)
           }
         }, [refresh, busy])
 
