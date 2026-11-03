@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.2
+
+- The composer bar now uses the host's own width variables
+  (`--dsh-composer-card-max-width` plus the side clearance), so it lines up
+  with the composer on wide, medium and narrow layouts instead of a fixed
+  820px.
+- Status polling dropped from 8 s to 20 s; the bar also refreshes on window
+  focus and on becoming visible, and disposes both listeners on unmount.
+- README trimmed to install and usage. Ownership rules, the cleanup inventory,
+  the API-key story and known limits moved to `docs/internals.md`.
+- README documents an agent-install prompt and the stable
+  `releases/latest/download/...` URL.
+
 ## 0.1.1
 
 - Packaging: `npm pack` tarball, portable zip, MIT LICENSE, `engines.dsh`.

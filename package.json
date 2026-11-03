@@ -1,6 +1,6 @@
 {
   "name": "dsh-borrowed-device",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "type": "module",
   "description": "Borrowed-device mode for DSH: mark a public machine, separate your traces from the machine owner's, and wipe only what this borrow created.",
