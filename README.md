@@ -15,14 +15,14 @@
 
 把下面这段直接发给你那台电脑上的 DSH：
 
-> 帮我装一个 DSH 插件：
-> 1. 把 `https://github.com/Cssskk123/dsh-borrowed-device/releases/latest/download/dsh-borrowed-device-0.1.1.zip` 下载到临时目录并解压
+> 帮我装一个 DSH 插件「借用设备守卫」：
+> 1. 打开 `https://api.github.com/repos/Cssskk123/dsh-borrowed-device/releases/latest`，从 `assets` 里取以 `.zip` 结尾那个的 `browser_download_url`，下载到临时目录并解压
 > 2. 用 `plugin_manager` 的 `install_bundle`，target 指向解压出来的 `dsh-borrowed-device` 目录
 > 3. 确认返回的 `application` 是 `applied`，然后告诉我插件列表里有没有「借用设备守卫」
 >
 > 哪一步失败就把原始报错贴给我，不要自己猜着改。
 
-装插件需要会话处于「完全权限」，中途弹审批点允许即可。版本号变了就让它去 [Releases](https://github.com/Cssskk123/dsh-borrowed-device/releases/latest) 取实际的 zip 文件名。
+装插件需要会话处于「完全权限」，中途弹审批点允许即可。
 
 要求 **DSH >= 0.2.1-rc.5**。从源码安装：直接用「安装本地插件」选仓库目录即可，目录是链接进来的，改完代码重载插件就生效。
 
