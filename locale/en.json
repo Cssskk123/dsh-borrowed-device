@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Borrowed Device Guard",
+    "description": "Use DSH on a public or borrowed computer without leaving your API key, conversations or attachments behind: arm the machine, move the key into memory, audit and wipe every local trace."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "dsh-borrowed-device",
+  "version": "0.1.1",
+  "private": false,
+  "type": "module",
+  "description": "Borrowed-device mode for DSH: mark a public machine, separate your traces from the machine owner's, and wipe only what this borrow created.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cssskk123/dsh-borrowed-device.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cssskk123/dsh-borrowed-device/issues"
+  },
+  "homepage": "https://github.com/Cssskk123/dsh-borrowed-device#readme",
+  "engines": {
+    "dsh": ">=0.2.1-rc.5",
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "privacy",
+    "public-computer",
+    "credential-cleanup"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
