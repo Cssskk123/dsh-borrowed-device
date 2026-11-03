@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- The packaged README no longer pins a release URL. The agent-install prompt now
+  resolves the current zip from the releases API, so it keeps working after the
+  next version instead of 404-ing.
+
 ## 0.1.2
 
 - The composer bar now uses the host's own width variables
